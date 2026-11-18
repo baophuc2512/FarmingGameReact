@@ -1,0 +1,81 @@
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css";
+ 
+@import "nativewind/theme";
+
+@theme {
+  /* Background */
+  --color-background: #0f172a;
+  --color-foreground: #f8fafc;
+
+  /* Surface */
+  --color-card: #1e293b;
+  --color-card-foreground: #f8fafc;
+
+  /* Primary */
+  --color-primary: #6366f1;
+  --color-primary-foreground: #ffffff;
+
+  /* Secondary */
+  --color-secondary: #334155;
+  --color-secondary-foreground: #f8fafc;
+
+  /* Muted */
+  --color-muted: #475569;
+  --color-muted-foreground: #94a3b8;
+
+  /* Accent */
+  --color-accent: #818cf8;
+  --color-accent-foreground: #ffffff;
+
+  /* Destructive */
+  --color-destructive: #ef4444;
+
+  /* Border & Input */
+  --color-border: #334155;
+  --color-input: #334155;
+  --color-ring: #6366f1;
+
+  /* Success & Warning */
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+
+  /* Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 0.875rem;
+  --radius-xl: 1rem;
+
+  
+  /* Fonts */
+  --font-sans: sans-regular;
+  --font-sans-light: sans-light;
+  --font-sans-medium: sans-medium;
+  --font-sans-bold: sans-bold;
+  --font-sans-extrabold: sans-extrabold;
+  --font-sans-semibold: sans-semibold;
+}
+
+@layer components {
+  /* Tabs icon container */
+  .tabs-icon {
+    @apply items-center justify-center rounded-full;
+  }
+
+  /* Tabs pill background */
+  .tabs-pill {
+    @apply flex-row items-center justify-center rounded-full px-4 py-2;
+    @apply bg-secondary;
+  }
+
+  /* Active tab */
+  .tabs-active {
+    @apply bg-primary;
+  }
+
+  /* Tab glyph */
+  .tabs-glyph {
+    @apply text-muted-foreground;
+  }
+}
