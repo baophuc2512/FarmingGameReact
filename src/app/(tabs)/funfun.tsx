@@ -91,17 +91,18 @@ const FunFun = () => {
                 >
                     <View className="flex-1 justify-center items-center bg-black/50">
 
-                        {/* Modal Content */}
-                        <View className="w-[85%] bg-white rounded-2xl p-5">
+                        <View className="w-[85%] max-h-[80%] bg-white rounded-2xl p-5">
 
                             <Text className="text-xl font-bold">
                                 Inventory
                             </Text>
 
-                            {/* Các MoneyFarm nằm trong inventory */}
                             <FlatList
+                                className="flex-grow-0"
                                 data={moneyFarmInventory}
                                 keyExtractor={(item) => item.container.id}
+                                showsVerticalScrollIndicator={true}
+                                persistentScrollbar={true}
                                 renderItem={({ item }) => {
                                     if (item.quantity <= 0) {
                                         return null;

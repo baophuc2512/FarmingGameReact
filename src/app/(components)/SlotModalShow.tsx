@@ -1,8 +1,9 @@
 import { RootState } from '@/store';
 import { PutMoneyFarm } from '@/store/slices/farmingSlotsSlice';
 import { RemoveItem } from '@/store/slices/inventorySlice';
-import { Pressable, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
+import AnimButton from './animButton';
 
 interface SlotModalShowProps {
     moneyFarm: MoneyFarm;
@@ -54,14 +55,12 @@ const SlotModalShow = ({moneyFarm, quantity}: SlotModalShowProps) => {
             </View>
 
             {/* Put To Farm */}
-            <Pressable
+            <AnimButton title="Put To Farm"
                 onPress={() => {PutToFarm(moneyFarm)}}
                 className="bg-green-600 rounded-xl px-4 py-3 active:bg-green-700"
             >
-                <Text className="text-white font-bold">
-                    Put To Farm
-                </Text>
-            </Pressable>
+                <></>
+            </AnimButton>
 
         </View>
     );
